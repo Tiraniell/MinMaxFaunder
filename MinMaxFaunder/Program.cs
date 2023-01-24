@@ -37,5 +37,7 @@ namespace MinMaxFaunder
             Console.WriteLine( "Min " + minValue );
             Console.WriteLine( "Max " + maxValue );
         }
+
+
     }
 }
