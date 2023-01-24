@@ -10,9 +10,9 @@ namespace MinMaxFaunder
 
             int maxValue = int.MinValue;
             int minValue = int.MaxValue;
-            float arithmeticMean = 0f;
+            double arithmeticMean = 0;
 
-            int[] array = new int[] { 13, 3, 435, 5, 63, -7, 8, 9, 3, 6, 12 };
+            int[] array = new int[] { 13, 3, 435, 5, 63, -7, 8, 9, 3, 6};
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -40,10 +40,12 @@ namespace MinMaxFaunder
             for (int i = 0; i < array.Length; i++)
             {                
                 int temporaryValue = array[i];
-                arithmeticMean += (temporaryValue / array.Length);
+                arithmeticMean = (arithmeticMean+temporaryValue) ;
             }
+            double someNumber = arithmeticMean / array.Length;
 
-            Console.WriteLine("темп " + arithmeticMean);
+            Console.WriteLine("темп " + someNumber);
+            Console.WriteLine("сумм " + arithmeticMean);
         }
 
     }
