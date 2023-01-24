@@ -10,7 +10,7 @@ namespace MinMaxFaunder
 
             int maxValue = int.MinValue;
             int minValue = int.MaxValue;
-            int arithmeticMean;
+            float arithmeticMean = 0f;
 
             int[] array = new int[] { 13, 3, 435, 5, 63, -7, 8, 9, 3, 6, 12 };
 
@@ -34,10 +34,17 @@ namespace MinMaxFaunder
                 }
             }
 
-            Console.WriteLine( "Min " + minValue );
-            Console.WriteLine( "Max " + maxValue );
-        }
+            Console.WriteLine("Min " + minValue);
+            Console.WriteLine("Max " + maxValue);
 
+            for (int i = 0; i < array.Length; i++)
+            {                
+                int temporaryValue = array[i];
+                arithmeticMean += (temporaryValue / array.Length);
+            }
+
+            Console.WriteLine("темп " + arithmeticMean);
+        }
 
     }
 }
